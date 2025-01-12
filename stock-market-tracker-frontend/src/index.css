@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #121212; /* Dark background by default */
+    color: #e0e0e0; /* Softer white for dark mode */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
+}
+
+/* Light and Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+body.light-mode {
+    background-color: #f5f5f5; /* Light mode background */
+    color: #000000; /* Black text for light mode */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e2f; /* Header background for dark mode */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: inherit; /* Inherits the current theme's text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode header {
+    background-color: #ffffff; /* Header background for light mode */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Title */
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: inherit; /* Inherits the current theme's text color */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    padding: 10px 20px;
+    background-color: #4cafef; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #3a9ed9;
+    transform: translateY(-2px);
+}
+
+body.light-mode .theme-toggle {
+    background-color: #007bff; /* Blue button for light mode */
+}
+
+body.light-mode .theme-toggle:hover {
+    background-color: #0056b3; /* Darker blue hover effect */
+}
+
+/* Main Content */
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Inputs and Selects */
+input, select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    background-color: #1e1e2f; /* Dark input background */
+    color: #e0e0e0; /* Light text for dark mode */
+    border-radius: 6px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode input,
+body.light-mode select {
+    background-color: #ffffff; /* White input background */
+    color: #000000; /* Black text for light mode */
+    border: 1px solid #ddd;
+}
+
+input:focus, select:focus {
+    border-color: #4cafef; /* Light blue focus effect */
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4cafef; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3a9ed9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+body.light-mode button {
+    background-color: #007bff; /* Blue button for light mode */
+}
+
+body.light-mode button:hover {
+    background-color: #0056b3; /* Darker blue hover effect */
+}
+
+/* List Items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #23232e; /* Dark background for list items */
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode li {
+    background-color: #ffffff; /* White background for list items in light mode */
+    border: 1px solid #ddd;
+}
+
+li a {
+    font-size: 1em;
+    font-weight: bold;
+    color: #4cafef; /* Blue links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: #7dc7ff; /* Lighter blue on hover */
+}
+
+body.light-mode li a {
+    color: #007bff; /* Blue links for light mode */
+}
+
+body.light-mode li a:hover {
+    color: #0056b3; /* Darker blue hover effect */
+}
+
+/* News Feed */
+.news-feed {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1e1e2f; /* Dark background for news feed */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode .news-feed {
+    background-color: #ffffff; /* Light background for news feed */
+}
+
+/* News Feed List */
+.news-feed li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: #23232e; /* Dark background for news items */
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode .news-feed li {
+    background-color: #ffffff; /* White background for news items */
+    border: 1px solid #ddd;
+}
+
+.news-feed li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* News Feed Images */
+.news-feed .news-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+body.light-mode .news-feed .news-image {
+    border: 1px solid #ddd;
+}
+
+.news-feed .news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-feed li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4cafef;
+    text-decoration: none;
+}
+
+body.light-mode .news-feed li a {
+    color: #007bff;
+}
+
+.news-feed li p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #c5c5c5; /* Softer gray for summary text */
+    text-align: justify;
+    margin: 0;
+}
+
+body.light-mode .news-feed li p {
+    color: #555; /* Darker gray for light mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .news-feed li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    background-color: #4cafef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #3a9ed9;
+}
+
+.pagination button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1em;
+    color: inherit; /* Adjusts based on light or dark mode */
+    margin: 0 10px; /* Adds spacing on both sides of the "Page X" text */
+}
